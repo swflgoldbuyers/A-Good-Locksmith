@@ -1480,3 +1480,72 @@ section{
     }
 
 }
+/* ==========================
+   JAVASCRIPT CLASSES
+========================== */
+
+header.scrolled{
+
+    background:#0a0a0a;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:.7s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.nav-links a.active-link{
+
+    color:var(--red);
+
+}
+
+@media(max-width:992px){
+
+    .nav-links{
+
+        position:absolute;
+
+        top:82px;
+
+        left:0;
+
+        width:100%;
+
+        background:#111;
+
+        display:none;
+
+        flex-direction:column;
+
+        padding:30px;
+
+        gap:20px;
+
+        text-align:center;
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+}
