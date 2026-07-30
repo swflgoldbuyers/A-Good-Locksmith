@@ -556,3 +556,109 @@ header{
 }
 
 }
+/* ==========================================
+   CTA
+========================================== */
+
+.cta-section{
+
+    padding:120px 0;
+
+    text-align:center;
+
+    background:#151515;
+
+}
+
+.cta-section h2{
+
+    font-size:3rem;
+
+    font-family:'Montserrat',sans-serif;
+
+    margin-bottom:20px;
+
+}
+
+.cta-section p{
+
+    color:#d0d0d0;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    background:#090909;
+
+    padding:90px 0 30px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:40px;
+
+}
+
+.footer-grid h3,
+.footer-grid h4{
+
+    margin-bottom:18px;
+
+}
+
+.footer-grid li{
+
+    margin-bottom:10px;
+
+    color:#c8c8c8;
+
+}
+
+.footer-grid p{
+
+    color:#b5b5b5;
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin-top:60px;
+
+    padding-top:30px;
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+@media(max-width:900px){
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.cta-section h2{
+
+    font-size:2.2rem;
+
+}
+
+}
