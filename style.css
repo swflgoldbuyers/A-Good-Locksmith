@@ -1549,3 +1549,112 @@ header.scrolled{
     }
 
 }
+/* =======================================
+   FLOATING CALL BUTTON
+======================================= */
+
+.floating-call{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+background:#D4AF37;
+
+color:#111;
+
+padding:16px 24px;
+
+border-radius:18px;
+
+font-weight:700;
+
+font-size:1rem;
+
+line-height:1.35;
+
+text-align:center;
+
+box-shadow:0 12px 30px rgba(212,175,55,.40);
+
+z-index:9999;
+
+transition:.3s;
+
+animation:pulse 2.2s infinite;
+
+}
+
+.floating-call span{
+
+display:block;
+
+margin-top:4px;
+
+font-size:1.15rem;
+
+font-weight:800;
+
+letter-spacing:.5px;
+
+}
+
+.floating-call:hover{
+
+transform:translateY(-4px);
+
+background:#c59f1f;
+
+color:#111;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(212,175,55,.45);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(212,175,55,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(212,175,55,0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.floating-call{
+
+left:15px;
+
+right:15px;
+
+bottom:18px;
+
+padding:18px;
+
+font-size:1.05rem;
+
+border-radius:16px;
+
+}
+
+.floating-call span{
+
+font-size:1.2rem;
+
+}
+
+}
