@@ -662,3 +662,79 @@ footer{
 }
 
 }
+/* ==========================================
+   REVIEWS
+========================================== */
+
+.reviews-section{
+    padding:140px 0;
+    background:#151515;
+}
+
+.review-summary{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:70px;
+    align-items:center;
+    margin-top:70px;
+}
+
+.rating-left{
+    background:#1d1d1d;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:45px 35px;
+    text-align:center;
+}
+
+.rating-left h2{
+    font-family:'Montserrat',sans-serif;
+    font-size:5rem;
+    color:#c1121f;
+    line-height:1;
+    margin-bottom:12px;
+}
+
+.stars{
+    color:#FFD700;
+    font-size:1.8rem;
+    letter-spacing:5px;
+    margin-bottom:15px;
+}
+
+.rating-left p{
+    color:#bfbfbf;
+    font-size:1rem;
+}
+
+.rating-right{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.rating-right h3{
+    font-family:'Montserrat',sans-serif;
+    font-size:2.5rem;
+    margin-bottom:24px;
+}
+
+.rating-right p{
+    color:#bfbfbf;
+    font-size:1.08rem;
+    line-height:1.9;
+    margin-bottom:35px;
+    max-width:700px;
+}
+
+@media(max-width:900px){
+
+.review-summary{
+    grid-template-columns:1fr;
+}
+
+.rating-right{
+    text-align:center;
+}
+
+}
