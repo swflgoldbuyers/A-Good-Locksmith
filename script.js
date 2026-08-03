@@ -6,15 +6,23 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 if (menuToggle && navLinks) {
+
     menuToggle.addEventListener("click", () => {
+
         navLinks.classList.toggle("active");
+
     });
 
     document.querySelectorAll(".nav-links a").forEach(link => {
+
         link.addEventListener("click", () => {
+
             navLinks.classList.remove("active");
+
         });
+
     });
+
 }
 
 // ======================================
@@ -54,14 +62,16 @@ const revealElements = document.querySelectorAll(`
 .stat-card,
 .area-card,
 .hero-content,
-.section-title
+.section-title,
+.section-heading,
+.faq-item
 `);
 
-const observer = new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
             entry.target.classList.add("show");
 
@@ -71,11 +81,13 @@ const observer = new IntersectionObserver((entries)=>{
 
     });
 
-},{
-    threshold:0.15
+}, {
+
+    threshold: 0.15
+
 });
 
-revealElements.forEach(el=>{
+revealElements.forEach(el => {
 
     el.classList.add("hidden");
 
@@ -90,16 +102,16 @@ revealElements.forEach(el=>{
 const sections = document.querySelectorAll("section[id]");
 const navItems = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
     let current = "";
 
-    sections.forEach(section=>{
+    sections.forEach(section => {
 
         const top = section.offsetTop - 140;
         const height = section.offsetHeight;
 
-        if(window.scrollY >= top && window.scrollY < top + height){
+        if (window.scrollY >= top && window.scrollY < top + height) {
 
             current = section.id;
 
@@ -107,11 +119,11 @@ window.addEventListener("scroll",()=>{
 
     });
 
-    navItems.forEach(link=>{
+    navItems.forEach(link => {
 
         link.classList.remove("active-link");
 
-        if(link.getAttribute("href")==="#" + current){
+        if (link.getAttribute("href") === "#" + current) {
 
             link.classList.add("active-link");
 
@@ -125,19 +137,19 @@ window.addEventListener("scroll",()=>{
 // SMOOTH SCROLL
 // ======================================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    anchor.addEventListener("click",function(e){
+    anchor.addEventListener("click", function (e) {
 
-        const target=document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(this.getAttribute("href"));
 
-        if(target){
+        if (target) {
 
             e.preventDefault();
 
             target.scrollIntoView({
 
-                behavior:"smooth"
+                behavior: "smooth"
 
             });
 
@@ -151,10 +163,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 // CURRENT YEAR
 // ======================================
 
-const year=document.querySelector("#year");
+const year = document.querySelector("#year");
 
-if(year){
+if (year) {
 
-    year.textContent=new Date().getFullYear();
+    year.textContent = new Date().getFullYear();
 
 }
+
+// ======================================
+// FAQ ACCORDION
+// ======================================
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const button = item.querySelector(".faq-question");
+    const icon = item.querySelector(".faq-icon");
+
+    button.addEventListener("click", () => {
+
+        const isActive = item.classList.contains("active");
+
+        faqItems.forEach(faq => {
+
+            faq.classList.remove("active");
+
+            const i = faq.querySelector(".faq-icon");
+
+            if (i) i.textContent = "+";
+
+        });
+
+        if (!isActive) {
+
+            item.classList.add("active");
+
+            if (icon) icon.textContent = "−";
+
+        }
+
+    });
+
+});
