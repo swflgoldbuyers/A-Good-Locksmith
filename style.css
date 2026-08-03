@@ -1658,3 +1658,56 @@ font-size:1.2rem;
 }
 
 }
+/* ===========================
+FAQ
+=========================== */
+
+.faq-section{
+
+background:#f7f7f7;
+
+}
+
+.faq-list{
+
+max-width:900px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.faq-item{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:16px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+}
+
+.faq-item h3{
+
+margin-bottom:12px;
+
+color:#b22222;
+
+font-size:1.2rem;
+
+}
+
+.faq-item p{
+
+margin:0;
+
+line-height:1.7;
+
+}
