@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://swflgoldbuyers.github.io/A-Good-Locksmith/sitemap.xml
+Sitemap: https://agoodlocksmith.com/sitemap.xml
