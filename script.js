@@ -178,6 +178,9 @@ faqItems.forEach(item => {
 
     const button = item.querySelector(".faq-question");
     const icon = item.querySelector(".faq-icon");
+    const answer = item.querySelector(".faq-answer");
+
+    if (!button) return;
 
     button.addEventListener("click", () => {
 
@@ -188,8 +191,10 @@ faqItems.forEach(item => {
             faq.classList.remove("active");
 
             const i = faq.querySelector(".faq-icon");
+            const a = faq.querySelector(".faq-answer");
 
             if (i) i.textContent = "+";
+            if (a) a.style.maxHeight = null;
 
         });
 
@@ -198,6 +203,7 @@ faqItems.forEach(item => {
             item.classList.add("active");
 
             if (icon) icon.textContent = "−";
+            if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
 
         }
 
