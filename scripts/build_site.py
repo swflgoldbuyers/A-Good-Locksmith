@@ -57,12 +57,8 @@ def nav_html(active: str = "") -> str:
 def header_html(active: str = "") -> str:
     return f"""<header class="site-header scrolled">
     <div class="container nav">
-        <a href="/" class="brand">
-            <img src="{asset('image0.png')}" alt="A Good Locksmith" class="brand-logo" width="62" height="62">
-            <span class="brand-text">
-                <span class="brand-name">A Good Locksmith</span>
-                <span class="brand-tagline">Serving Southwest Florida Since 1994</span>
-            </span>
+        <a href="/" class="brand" aria-label="A Good Locksmith home">
+            <img src="{asset('logo-header.png')}" alt="A Good Locksmith" class="brand-logo brand-logo-rect" width="220" height="92">
         </a>
         <nav aria-label="Main navigation">
             <ul class="nav-links">
@@ -94,7 +90,7 @@ def footer_html() -> str:
             <div>
                 <h3>A GOOD LOCKSMITH</h3>
                 <p>
-                    Serving Southwest Florida since 1994 with trusted residential,
+                    Serving Southwest Florida since 1988 with trusted residential,
                     commercial and automotive locksmith services.
                 </p>
                 <br>
@@ -129,13 +125,13 @@ def footer_html() -> str:
                     <li><a href="/resources/locked-out-of-your-car/">Car Lockout Tips</a></li>
                     <li><a href="/resources/5-signs-its-time-to-replace-your-locks/">Replace Locks</a></li>
                     <li><a href="/#about">About Us</a></li>
-                    <li>Serving Since 1994</li>
+                    <li>Serving Since 1988</li>
                     <li>24/7 Emergency Service</li>
                 </ul>
             </div>
         </div>
         <div class="footer-trust">
-            <span class="footer-trust-item">Serving Southwest Florida Since 1994</span>
+            <span class="footer-trust-item">Serving Southwest Florida Since 1988</span>
             <span class="footer-trust-divider" aria-hidden="true"></span>
             <span class="footer-trust-item">Residential • Commercial • Automotive</span>
             <span class="footer-trust-divider" aria-hidden="true"></span>
@@ -210,7 +206,7 @@ def local_business_schema(city: dict) -> dict:
         "image": f"{SITE}/HERO.webp",
         "telephone": PHONE_E164,
         "description": city["meta_description"],
-        "foundingDate": "1994",
+        "foundingDate": "1988",
         "priceRange": "$$",
         "areaServed": {
             "@type": "City",
@@ -708,7 +704,7 @@ def build_article_page(article: dict) -> None:
     </div>
 </section>
 {faq_block}
-{cta_band("Need Professional Locksmith Help?", "A Good Locksmith has served Southwest Florida since 1994. Call for residential, commercial or automotive service.")}
+{cta_band("Need Professional Locksmith Help?", "A Good Locksmith has served Southwest Florida since 1988. Call for residential, commercial or automotive service.")}
 {footer_html()}
 </body>
 </html>"""
@@ -751,7 +747,7 @@ def build_locations_index() -> None:
         },
     ]
     body = f"""{header_html("services")}
-{page_hero("SERVICE AREAS", "Locksmith Services Across Southwest Florida", "Fast, dependable locksmith service throughout Lee and Collier County since 1994.")}
+{page_hero("SERVICE AREAS", "Locksmith Services Across Southwest Florida", "Fast, dependable locksmith service throughout Lee and Collier County since 1988.")}
 <div class="container breadcrumb-wrap">
 {breadcrumbs_html(crumbs)}
 </div>
@@ -811,7 +807,7 @@ def build_services_index() -> None:
 </html>"""
     html = head_html(
         title="Locksmith Services | Residential, Commercial & Automotive | A Good Locksmith",
-        description="Explore residential, commercial, automotive and emergency locksmith services from A Good Locksmith — serving Southwest Florida since 1994.",
+        description="Explore residential, commercial, automotive and emergency locksmith services from A Good Locksmith — serving Southwest Florida since 1988.",
         canonical=canonical,
         og_title="Locksmith Services | A Good Locksmith",
         schemas=schemas,
@@ -853,7 +849,7 @@ def build_resources_index() -> None:
         ],
     }
     body = f"""{header_html("resources")}
-{page_hero("RESOURCE CENTER", "Locksmith Tips & Security Guidance", "Practical advice from Southwest Florida locksmith experts — trusted local guidance since 1994.")}
+{page_hero("RESOURCE CENTER", "Locksmith Tips & Security Guidance", "Practical advice from Southwest Florida locksmith experts — trusted local guidance since 1988.")}
 <div class="container breadcrumb-wrap">
 {breadcrumbs_html(crumbs)}
 </div>
@@ -868,7 +864,7 @@ def build_resources_index() -> None:
 </html>"""
     html = head_html(
         title="Locksmith Resource Center | Security Tips & Guides | A Good Locksmith",
-        description="Browse locksmith tips, home security guides and automotive advice from A Good Locksmith, serving Southwest Florida since 1994.",
+        description="Browse locksmith tips, home security guides and automotive advice from A Good Locksmith, serving Southwest Florida since 1988.",
         canonical=canonical,
         og_title="Locksmith Resource Center | A Good Locksmith",
         schemas=[breadcrumb_schema(crumbs), item_list],
@@ -921,13 +917,13 @@ Business:
 A Good Locksmith
 
 Description:
-Residential, commercial, and automotive locksmith serving Southwest Florida since 1994.
+Residential, commercial, and automotive locksmith serving Southwest Florida since 1988.
 
 Phone:
 {PHONE_DISPLAY}
 
 Founded:
-1994
+1988
 
 Primary Service Area:
 Bonita Springs

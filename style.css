@@ -22,7 +22,7 @@
 
     --transition:.25s ease;
 
-    --header-height:108px;
+    --header-height:118px;
     --header-glass-bg:rgba(10,10,10,.78);
     --header-glass-blur:22px;
 
@@ -293,6 +293,8 @@ header,
 
     min-width:0;
 
+    max-width:min(280px, 34vw);
+
 }
 
 .brand-logo{
@@ -305,6 +307,16 @@ header,
     flex-shrink:0;
 
     border-radius:10px;
+
+}
+
+.brand-logo-rect{
+
+    width:auto;
+    height:78px;
+    max-width:100%;
+    border-radius:8px;
+    object-fit:contain;
 
 }
 
@@ -494,17 +506,35 @@ header,
 
 }
 
+.hero h1.hero-brand-title{
+
+    font-size:clamp(2.85rem, 6.4vw, 5.4rem);
+
+    line-height:.95;
+
+    letter-spacing:.01em;
+
+    max-width:12ch;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+    text-shadow:0 8px 30px rgba(0,0,0,.35);
+
+}
+
 .hero-subheadline{
 
-    max-width:580px;
+    max-width:620px;
 
-    font-size:clamp(1.05rem, 2vw, 1.32rem);
+    font-size:clamp(1.05rem, 2vw, 1.28rem);
 
     font-weight:500;
 
-    color:rgba(255,255,255,.86);
+    color:rgba(255,255,255,.88);
 
-    line-height:1.5;
+    line-height:1.55;
 
     margin-bottom:24px;
 
@@ -1465,6 +1495,25 @@ header,
     align-items:start;
 
     margin-bottom:28px;
+
+}
+
+.about-brand-seal{
+
+    width:112px;
+
+    height:112px;
+
+    object-fit:contain;
+
+    border-radius:50%;
+
+    margin-bottom:22px;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.12),
+        0 0 0 4px #fff,
+        0 0 0 5px rgba(215,25,32,.22);
 
 }
 
@@ -2470,6 +2519,30 @@ section{
 
     }
 
+    .brand{
+
+        max-width:min(240px, 30vw);
+
+    }
+
+    .brand-logo-rect{
+
+        height:68px;
+
+    }
+
+    .nav{
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        gap:8px;
+
+    }
+
 }
 
 /* ---------- MOBILE ---------- */
@@ -2625,11 +2698,41 @@ section{
 
     }
 
+    .brand{
+
+        max-width:min(200px, 48vw);
+
+    }
+
     .brand-logo{
 
         width:42px;
 
         height:42px;
+
+    }
+
+    .brand-logo-rect{
+
+        height:54px;
+
+        width:auto;
+
+    }
+
+    .hero h1.hero-brand-title{
+
+        font-size:clamp(2.4rem, 11vw, 3.4rem);
+
+        max-width:10ch;
+
+    }
+
+    .about-brand-seal{
+
+        width:96px;
+
+        height:96px;
 
     }
 
