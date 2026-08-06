@@ -60,7 +60,8 @@ const revealElements = document.querySelectorAll(`
 .article-card,
 .hero-content,
 .section-heading,
-.faq-item
+.faq-item,
+.communities-banner
 `);
 
 const revealObserver = new IntersectionObserver((entries) => {

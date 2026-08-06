@@ -492,6 +492,22 @@ header,
 
 }
 
+.hero-content-centered{
+
+    max-width:920px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
 .hero h1{
 
     margin-bottom:20px;
@@ -508,35 +524,43 @@ header,
 
 .hero h1.hero-brand-title{
 
-    font-size:clamp(2.85rem, 6.4vw, 5.4rem);
+    font-size:clamp(3.35rem, 7.5vw, 6.35rem);
 
-    line-height:.95;
+    line-height:.94;
 
-    letter-spacing:.01em;
+    letter-spacing:.015em;
 
     max-width:12ch;
 
     text-transform:uppercase;
 
-    margin-bottom:22px;
+    margin-bottom:24px;
 
-    text-shadow:0 8px 30px rgba(0,0,0,.35);
+    text-shadow:0 10px 34px rgba(0,0,0,.38);
 
 }
 
 .hero-subheadline{
 
-    max-width:620px;
+    max-width:720px;
 
-    font-size:clamp(1.05rem, 2vw, 1.28rem);
+    font-size:clamp(1.18rem, 2.25vw, 1.48rem);
 
     font-weight:500;
 
-    color:rgba(255,255,255,.88);
+    color:rgba(255,255,255,.9);
 
     line-height:1.55;
 
-    margin-bottom:24px;
+    margin-bottom:26px;
+
+}
+
+.hero-content-centered .hero-subheadline{
+
+    margin-left:auto;
+
+    margin-right:auto;
 
 }
 
@@ -546,13 +570,15 @@ header,
 
     align-items:center;
 
+    justify-content:center;
+
     flex-wrap:wrap;
 
-    gap:10px 16px;
+    gap:12px 18px;
 
-    margin-bottom:38px;
+    margin-bottom:40px;
 
-    padding:10px 0;
+    padding:12px 0;
 
 }
 
@@ -560,15 +586,15 @@ header,
 
     color:#f5b301;
 
-    font-size:.82rem;
+    font-size:.95rem;
 
-    letter-spacing:2px;
+    letter-spacing:2.4px;
 
     line-height:1;
 
-    padding-right:16px;
+    padding-right:18px;
 
-    margin-right:16px;
+    margin-right:18px;
 
     border-right:1px solid rgba(255,255,255,.18);
 
@@ -576,11 +602,11 @@ header,
 
 .hero-trust-item{
 
-    font-size:.82rem;
+    font-size:.95rem;
 
     font-weight:500;
 
-    color:rgba(255,255,255,.62);
+    color:rgba(255,255,255,.68);
 
     letter-spacing:.02em;
 
@@ -588,9 +614,9 @@ header,
 
 .hero-trust-item:first-of-type{
 
-    padding-right:16px;
+    padding-right:18px;
 
-    margin-right:16px;
+    margin-right:18px;
 
     border-right:1px solid rgba(255,255,255,.18);
 
@@ -600,16 +626,70 @@ header,
 
     display:flex;
 
-    gap:14px;
+    gap:16px;
 
     flex-wrap:wrap;
 
+    justify-content:center;
+
 }
 
-.hero-buttons .btn-red,
-.hero-buttons .btn-outline{
+.hero .hero-buttons .btn-red,
+.hero .hero-buttons .btn-outline{
 
-    min-width:210px;
+    min-width:230px;
+
+    padding:17px 38px;
+
+    font-size:1.02rem;
+
+}
+
+/* ==========================
+   COMMUNITIES TRUST BANNER
+========================== */
+
+.communities-banner-section{
+
+    position:relative;
+
+    z-index:11;
+
+    background:#fff;
+
+    padding:52px 0 48px;
+
+}
+
+.communities-banner{
+
+    width:100%;
+
+    margin:0 auto;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.06),
+        0 2px 8px rgba(0,0,0,.03);
+
+}
+
+.communities-banner img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    max-width:100%;
+
+    object-fit:contain;
 
 }
 
@@ -623,9 +703,11 @@ header,
 
     z-index:10;
 
-    margin-top:-56px;
+    margin-top:0;
 
-    padding-bottom:20px;
+    padding:8px 0 28px;
+
+    background:#fff;
 
 }
 
@@ -2596,7 +2678,9 @@ section{
 
     .review-carousel-section{
 
-        margin-top:-56px;
+        margin-top:0;
+
+        padding:4px 0 24px;
 
     }
 
@@ -2655,7 +2739,7 @@ section{
 
     .hero-subheadline{
 
-        font-size:1rem;
+        font-size:1.12rem;
 
     }
 
@@ -2663,7 +2747,7 @@ section{
 
         flex-direction:column;
 
-        align-items:flex-start;
+        align-items:center;
 
         gap:6px;
 
@@ -2722,9 +2806,21 @@ section{
 
     .hero h1.hero-brand-title{
 
-        font-size:clamp(2.4rem, 11vw, 3.4rem);
+        font-size:clamp(2.75rem, 12vw, 3.9rem);
 
         max-width:10ch;
+
+    }
+
+    .communities-banner-section{
+
+        padding:40px 0 36px;
+
+    }
+
+    .communities-banner{
+
+        border-radius:14px;
 
     }
 
