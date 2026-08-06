@@ -558,6 +558,66 @@ header,
 
 }
 
+.hero-cities{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin:0 0 22px;
+
+    font-size:.78rem;
+
+    font-weight:500;
+
+    letter-spacing:.08em;
+
+    text-transform:none;
+
+    color:rgba(255,255,255,.8);
+
+    line-height:1.4;
+
+}
+
+.hero-cities-icon{
+
+    display:inline-flex;
+
+    color:rgba(255,255,255,.78);
+
+    flex-shrink:0;
+
+}
+
+.hero-cities-icon svg{
+
+    display:block;
+
+}
+
+.hero-eyebrow{
+
+    display:block;
+
+    margin:0 0 16px;
+
+    color:var(--red);
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+}
+
 .hero h1{
 
     margin-bottom:20px;
@@ -584,7 +644,7 @@ header,
 
     text-transform:uppercase;
 
-    margin-bottom:24px;
+    margin-bottom:18px;
 
     text-shadow:0 10px 34px rgba(0,0,0,.38);
 
@@ -594,15 +654,15 @@ header,
 
     max-width:720px;
 
-    font-size:clamp(1.18rem, 2.25vw, 1.48rem);
+    font-size:clamp(1.2rem, 2.2vw, 1.45rem);
 
     font-weight:500;
 
-    color:rgba(255,255,255,.9);
+    color:rgba(255,255,255,.92);
 
-    line-height:1.55;
+    line-height:1.45;
 
-    margin-bottom:26px;
+    margin:0 0 18px;
 
 }
 
@@ -611,6 +671,22 @@ header,
     margin-left:auto;
 
     margin-right:auto;
+
+}
+
+.hero-support{
+
+    max-width:620px;
+
+    margin:0 auto 38px;
+
+    font-size:clamp(1rem, 1.5vw, 1.12rem);
+
+    font-weight:400;
+
+    line-height:1.7;
+
+    color:rgba(255,255,255,.78);
 
 }
 
@@ -676,7 +752,7 @@ header,
 
     display:flex;
 
-    gap:16px;
+    gap:20px;
 
     flex-wrap:wrap;
 
@@ -708,7 +784,7 @@ header,
 
     width:100%;
 
-    margin-top:40px;
+    margin-top:56px;
 
     padding:0 0 36px;
 
@@ -728,9 +804,9 @@ header,
 
     z-index:2;
 
-    padding-top:clamp(24px, 5vh, 64px);
+    padding-top:clamp(12px, 2.5vh, 28px);
 
-    padding-bottom:12px;
+    padding-bottom:8px;
 
 }
 
@@ -2863,7 +2939,9 @@ section{
 
     .hero-subheadline{
 
-        font-size:1.12rem;
+        font-size:1.15rem;
+
+        margin-bottom:14px;
 
     }
 
@@ -2933,6 +3011,52 @@ section{
         font-size:clamp(2.75rem, 12vw, 3.9rem);
 
         max-width:10ch;
+
+        margin-bottom:14px;
+
+    }
+
+    .hero-cities{
+
+        font-size:.7rem;
+
+        letter-spacing:.04em;
+
+        margin-bottom:16px;
+
+        flex-wrap:wrap;
+
+        row-gap:4px;
+
+        padding:0 8px;
+
+    }
+
+    .hero-eyebrow{
+
+        font-size:.72rem;
+
+        letter-spacing:.18em;
+
+        margin-bottom:12px;
+
+    }
+
+    .hero-support{
+
+        max-width:34ch;
+
+        margin-bottom:30px;
+
+        font-size:.98rem;
+
+    }
+
+    .hero-experience .hero-buttons{
+
+        gap:14px;
+
+        width:100%;
 
     }
 
@@ -3287,6 +3411,16 @@ right:25px;
 
 bottom:25px;
 
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:2px;
+
 background:#D62828;
 
 color:#fff;
@@ -3315,11 +3449,42 @@ animation:pulse 2.2s infinite;
 
 }
 
-.floating-call span{
+.floating-call-label{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:6px;
+
+font-size:1rem;
+
+font-weight:700;
+
+}
+
+.floating-call-icon{
+
+display:inline-block;
+
+line-height:1;
+
+}
+
+.floating-call-icon-mobile{
+
+display:none;
+
+}
+
+.floating-call-number,
+.floating-call span.floating-call-number{
 
 display:block;
 
-margin-top:4px;
+margin-top:2px;
 
 font-size:1.15rem;
 
@@ -3365,23 +3530,64 @@ box-shadow:0 0 0 0 rgba(214,40,40,0);
 
 .floating-call{
 
-left:15px;
+left:auto;
 
-right:15px;
+right:14px;
 
-bottom:18px;
+bottom:16px;
 
-padding:18px;
+width:auto;
 
-font-size:1.05rem;
+max-width:min(220px, calc(100vw - 28px));
 
-border-radius:16px;
+padding:11px 14px;
+
+border-radius:999px;
+
+font-size:.82rem;
+
+line-height:1.25;
+
+gap:1px;
+
+box-shadow:0 10px 22px rgba(214,40,40,.32);
+
+animation:none;
 
 }
 
-.floating-call span{
+.floating-call-label{
 
-font-size:1.2rem;
+font-size:.78rem;
+
+font-weight:700;
+
+gap:5px;
+
+}
+
+.floating-call-icon-desktop{
+
+display:none;
+
+}
+
+.floating-call-icon-mobile{
+
+display:inline-block;
+
+font-size:.85rem;
+
+}
+
+.floating-call-number,
+.floating-call span.floating-call-number{
+
+margin-top:1px;
+
+font-size:.92rem;
+
+letter-spacing:.2px;
 
 }
 
