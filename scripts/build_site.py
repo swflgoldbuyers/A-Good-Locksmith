@@ -145,8 +145,12 @@ def footer_html() -> str:
     </div>
 </footer>
 <a href="tel:{PHONE_TEL}" class="floating-call">
-    Need a Locksmith?<br>
-    <span>{PHONE_DISPLAY}</span>
+    <span class="floating-call-label">
+        <span class="floating-call-icon floating-call-icon-desktop" aria-hidden="true">🔑</span>
+        <span class="floating-call-icon floating-call-icon-mobile" aria-hidden="true">📞</span>
+        Need a Locksmith?
+    </span>
+    <span class="floating-call-number">{PHONE_DISPLAY}</span>
 </a>
 <script src="{asset('script.js')}"></script>"""
 
