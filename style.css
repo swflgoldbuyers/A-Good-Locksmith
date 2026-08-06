@@ -1808,24 +1808,22 @@ header,
 
     position:absolute;
 
-    inset:-8% -6% -4% -8%;
+    inset:-4% -4% 0 -4%;
 
     z-index:0;
 
     background:
-        url("images/IMG_2080.jpg") center 38% / cover no-repeat;
+        url("images/IMG_2080.jpg") center 32% / cover no-repeat;
 
-    opacity:.10;
+    opacity:.12;
 
-    mix-blend-mode:multiply;
-
-    filter:grayscale(.2) contrast(.96);
+    filter:grayscale(.12) contrast(.98) saturate(.9);
 
     pointer-events:none;
 
-    -webkit-mask-image:radial-gradient(ellipse 78% 72% at 45% 42%, #000 28%, rgba(0,0,0,.55) 55%, transparent 78%);
+    -webkit-mask-image:radial-gradient(ellipse 88% 82% at 42% 40%, #000 22%, rgba(0,0,0,.7) 52%, transparent 82%);
 
-    mask-image:radial-gradient(ellipse 78% 72% at 45% 42%, #000 28%, rgba(0,0,0,.55) 55%, transparent 78%);
+    mask-image:radial-gradient(ellipse 88% 82% at 42% 40%, #000 22%, rgba(0,0,0,.7) 52%, transparent 82%);
 
 }
 
