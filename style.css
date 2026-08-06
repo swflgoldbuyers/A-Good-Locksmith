@@ -836,7 +836,7 @@ header,
 
     overflow:hidden;
 
-    background:#fff;
+    background:#0f1a14;
 
     box-shadow:
         0 18px 42px rgba(0,0,0,.28),
@@ -854,7 +854,11 @@ header,
 
     max-width:100%;
 
-    object-fit:contain;
+    aspect-ratio:1536 / 435;
+
+    object-fit:cover;
+
+    object-position:center 42%;
 
 }
 
@@ -1905,7 +1909,7 @@ header,
 
     object-fit:cover;
 
-    object-position:center 22%;
+    object-position:center 40%;
 
     width:100%;
 
