@@ -130,15 +130,6 @@ def footer_html() -> str:
                 </ul>
             </div>
         </div>
-        <div class="footer-trust">
-            <span class="footer-trust-item">Serving Southwest Florida Since 1988</span>
-            <span class="footer-trust-divider" aria-hidden="true"></span>
-            <span class="footer-trust-item">Residential • Commercial • Automotive</span>
-            <span class="footer-trust-divider" aria-hidden="true"></span>
-            <span class="footer-trust-item">232+ Google Reviews</span>
-            <span class="footer-trust-divider" aria-hidden="true"></span>
-            <span class="footer-trust-item">24/7 Emergency Service</span>
-        </div>
         <div class="footer-bottom">
             © 2026 A Good Locksmith • All Rights Reserved
         </div>
@@ -839,7 +830,7 @@ def build_resources_index() -> None:
     item_list = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "Locksmith Resource Center",
+        "name": "Resource Center",
         "url": canonical,
         "description": "Helpful locksmith tips, security advice and guides from A Good Locksmith.",
         "hasPart": [
@@ -853,7 +844,7 @@ def build_resources_index() -> None:
         ],
     }
     body = f"""{header_html("resources")}
-{page_hero("RESOURCE CENTER", "Locksmith Tips & Security Guidance", "Practical advice from Southwest Florida locksmith experts — trusted local guidance since 1988.")}
+{page_hero("RESOURCE CENTER", "Resource Center", "Practical advice from Southwest Florida locksmith experts — trusted local guidance since 1988.")}
 <div class="container breadcrumb-wrap">
 {breadcrumbs_html(crumbs)}
 </div>
@@ -867,10 +858,10 @@ def build_resources_index() -> None:
 </body>
 </html>"""
     html = head_html(
-        title="Locksmith Resource Center | Security Tips & Guides | A Good Locksmith",
+        title="Resource Center | Security Tips & Guides | A Good Locksmith",
         description="Browse locksmith tips, home security guides and automotive advice from A Good Locksmith, serving Southwest Florida since 1988.",
         canonical=canonical,
-        og_title="Locksmith Resource Center | A Good Locksmith",
+        og_title="Resource Center | A Good Locksmith",
         schemas=[breadcrumb_schema(crumbs), item_list],
     ) + body
     write_page(ROOT / "resources" / "index.html", html)
