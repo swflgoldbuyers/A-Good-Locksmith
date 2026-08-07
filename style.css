@@ -1828,9 +1828,9 @@ header,
     background:
         url("images/IMG_2080.jpg") center 32% / cover no-repeat;
 
-    opacity:.24;
+    opacity:.35;
 
-    filter:grayscale(.12) contrast(.98) saturate(.9) blur(6px);
+    filter:grayscale(.12) contrast(.98) saturate(.9) blur(4px);
 
     pointer-events:none;
 
@@ -2945,12 +2945,31 @@ section{
 
     /* Mobile-only: zoom the hero collage out so both the service van (left)
        and the technician-with-customer photo (right) are clearly visible.
-       Desktop framing (center/cover) is untouched. */
+       Show the full collage width and fade it smoothly into the dark below so
+       there is no hard band edge. Desktop framing (center/cover) is untouched. */
     .hero.hero-experience::before{
 
-        background-size:150% auto;
+        background-size:contain;
 
-        background-position:50% 24%;
+        background-position:center top;
+
+        -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 55%, transparent 92%);
+
+        mask-image:linear-gradient(to bottom, #000 0%, #000 55%, transparent 92%);
+
+    }
+
+    /* Lighten the overlay near the top on mobile so the zoomed-out collage
+       (van + technician/customer) is visible, while keeping the lower area
+       dark enough that the heading, subtitle and buttons stay readable. */
+    .hero.hero-experience .overlay{
+
+        background:linear-gradient(
+            180deg,
+            rgba(0,0,0,.42) 0%,
+            rgba(0,0,0,.5) 15%,
+            rgba(0,0,0,.72) 34%,
+            rgba(0,0,0,.82) 100%);
 
     }
 
