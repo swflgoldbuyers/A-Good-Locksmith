@@ -1828,7 +1828,7 @@ header,
     background:
         url("images/IMG_2080.jpg") center 32% / cover no-repeat;
 
-    opacity:.15;
+    opacity:.24;
 
     filter:grayscale(.12) contrast(.98) saturate(.9) blur(6px);
 
@@ -2943,6 +2943,17 @@ section{
 
     }
 
+    /* Mobile-only: zoom the hero collage out so both the service van (left)
+       and the technician-with-customer photo (right) are clearly visible.
+       Desktop framing (center/cover) is untouched. */
+    .hero.hero-experience::before{
+
+        background-size:150% auto;
+
+        background-position:50% 24%;
+
+    }
+
     .hero-float-stack{
 
         margin-top:28px;
@@ -3725,11 +3736,9 @@ z-index:0;
 background:
     url("images/keys.webp") center center / cover no-repeat;
 
-opacity:.10;
+opacity:.13;
 
-filter:grayscale(.35) brightness(.55) contrast(1.05);
-
-mix-blend-mode:soft-light;
+filter:grayscale(.2) contrast(1.05) brightness(.9);
 
 pointer-events:none;
 
