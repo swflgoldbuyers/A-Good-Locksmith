@@ -1830,7 +1830,7 @@ header,
 
     opacity:.15;
 
-    filter:grayscale(.12) contrast(.98) saturate(.9) blur(2.5px);
+    filter:grayscale(.12) contrast(.98) saturate(.9) blur(6px);
 
     pointer-events:none;
 
