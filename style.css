@@ -2943,15 +2943,21 @@ section{
 
     }
 
-    /* Mobile-only: subtly zoom the hero collage out so a little more of it is
-       visible (less tight than plain cover). Keeps the full-bleed look — the
-       small top/bottom gaps fall behind the fixed header and the communities
-       card. Desktop framing (center/cover) is untouched. */
+    /* Mobile-only: frame the hero collage much wider so both the service van
+       (left) and the technician-with-customer (right) are visible at once,
+       resembling the desktop framing (no distortion — height stays auto).
+       Anchor it right below the fixed 118px header (no empty gap above) and
+       let its lower edge dissolve into the dark hero where the text/buttons
+       sit, so there is no hard band edge. Desktop (center/cover) is untouched. */
     .hero.hero-experience::before{
 
-        background-size:auto 84%;
+        background-size:122% auto;
 
-        background-position:center 34%;
+        background-position:center 118px;
+
+        -webkit-mask-image:linear-gradient(to bottom, #000 0, #000 380px, transparent 470px);
+
+        mask-image:linear-gradient(to bottom, #000 0, #000 380px, transparent 470px);
 
     }
 
