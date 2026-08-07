@@ -1703,6 +1703,19 @@ header,
 
     }
 
+    /* Commercial ("Security Solutions For Your Business") photo is a square
+       multi-lock collage; on mobile the 4/3 cover crop zoomed in too far.
+       Show the full image on mobile only — desktop is unchanged. */
+    .service-image img.service-image-commercial{
+
+        aspect-ratio:1/1;
+
+        object-fit:cover;
+
+        object-position:center center;
+
+    }
+
 }
 /* =========================================
    PART 3
@@ -1815,9 +1828,9 @@ header,
     background:
         url("images/IMG_2080.jpg") center 32% / cover no-repeat;
 
-    opacity:.12;
+    opacity:.15;
 
-    filter:grayscale(.12) contrast(.98) saturate(.9);
+    filter:grayscale(.12) contrast(.98) saturate(.9) blur(6px);
 
     pointer-events:none;
 
@@ -3712,7 +3725,7 @@ z-index:0;
 background:
     url("images/keys.webp") center center / cover no-repeat;
 
-opacity:.06;
+opacity:.10;
 
 filter:grayscale(.35) brightness(.55) contrast(1.05);
 
