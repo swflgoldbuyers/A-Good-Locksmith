@@ -495,7 +495,15 @@ header,
 
     z-index:0;
 
-    background:url("images/heroreplace.png") center/cover no-repeat;
+    /* Fit the full image width so the whole scene (van + technician + customer)
+       is visible instead of being cropped by cover. Height stays auto (no
+       distortion); anchored to the top so the people scene sits behind the
+       heading, and the lower edge fades into the dark hero. */
+    background:url("images/heroreplace.png") center top / 100% auto no-repeat;
+
+    -webkit-mask-image:linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
+
+    mask-image:linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
 
     pointer-events:none;
 
@@ -2951,13 +2959,13 @@ section{
        sit, so there is no hard band edge. Desktop (center/cover) is untouched. */
     .hero.hero-experience::before{
 
-        background-size:122% auto;
+        background-size:100% auto;
 
         background-position:center 118px;
 
-        -webkit-mask-image:linear-gradient(to bottom, #000 0, #000 380px, transparent 470px);
+        -webkit-mask-image:linear-gradient(to bottom, #000 0, #000 300px, transparent 400px);
 
-        mask-image:linear-gradient(to bottom, #000 0, #000 380px, transparent 470px);
+        mask-image:linear-gradient(to bottom, #000 0, #000 300px, transparent 400px);
 
     }
 
