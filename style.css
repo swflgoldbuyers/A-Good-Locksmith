@@ -491,19 +491,23 @@ header,
 
     position:absolute;
 
-    inset:0;
+    /* Start below the fixed header so the top of the collage (the
+       technician's head sits on the image's top edge) is not painted
+       underneath the bar. Cover fills the rest of the hero — no empty
+       #111 band. Extra Y offset gives the cap a little air so it
+       doesn't look sliced by the header edge. Slight right bias keeps
+       him in frame when cover trims the sides on a tall hero. */
+    top:var(--header-height);
+
+    right:0;
+
+    bottom:0;
+
+    left:0;
 
     z-index:0;
 
-    /* Fit the full image width so the whole scene (van + technician + customer)
-       is visible instead of being cropped by cover. Height stays auto (no
-       distortion); anchored to the top so the people scene sits behind the
-       heading, and the lower edge fades into the dark hero. */
-    background:url("images/heroreplace.png") center top / 100% auto no-repeat;
-
-    -webkit-mask-image:linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
-
-    mask-image:linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
+    background:url("images/heroreplace.png") 64% 24px / cover no-repeat;
 
     pointer-events:none;
 
@@ -792,7 +796,7 @@ header,
 
     width:100%;
 
-    margin-top:56px;
+    margin-top:32px;
 
     padding:0 0 36px;
 
@@ -2919,6 +2923,33 @@ section{
 
 }
 
+/* ---------- TABLET / SMALL DESKTOP ---------- */
+
+@media(max-width:992px){
+
+    /* Below this width the hero is tall relative to its width, so full-hero
+       cover would zoom into a center strip. Use a people-scene band instead
+       (same idea as mobile) so the van and technician stay in frame. */
+    .hero.hero-experience::before{
+
+        top:var(--header-height);
+
+        bottom:auto;
+
+        height:min(58vh, 520px);
+
+        background-position:72% 18px;
+
+        background-size:cover;
+
+        -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 70%, transparent 100%);
+
+        mask-image:linear-gradient(to bottom, #000 0%, #000 70%, transparent 100%);
+
+    }
+
+}
+
 /* ---------- MOBILE ---------- */
 
 @media(max-width:768px){
@@ -2951,21 +2982,26 @@ section{
 
     }
 
-    /* Mobile-only: frame the hero collage much wider so both the service van
-       (left) and the technician-with-customer (right) are visible at once,
-       resembling the desktop framing (no distortion — height stays auto).
-       Anchor it right below the fixed 118px header (no empty gap above) and
-       let its lower edge dissolve into the dark hero where the text/buttons
-       sit, so there is no hard band edge. Desktop (center/cover) is untouched. */
+    /* Mobile/tablet: do not cover the full (very tall) hero — that would
+       zoom into a narrow center strip and lose the van and the technician.
+       Paint a band just below the header that is tall enough to sit behind
+       the heading and buttons, keep his head near the top, and fade into
+       the dark so there is no hard edge or empty black void. */
     .hero.hero-experience::before{
 
-        background-size:100% auto;
+        top:var(--header-height);
 
-        background-position:center 118px;
+        bottom:auto;
 
-        -webkit-mask-image:linear-gradient(to bottom, #000 0, #000 300px, transparent 400px);
+        height:min(68vh, 560px);
 
-        mask-image:linear-gradient(to bottom, #000 0, #000 300px, transparent 400px);
+        background-position:78% 16px;
+
+        background-size:cover;
+
+        -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+
+        mask-image:linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
 
     }
 
@@ -3057,6 +3093,14 @@ section{
     .container{
 
         width:92%;
+
+    }
+
+    .hero.hero-experience::before{
+
+        height:min(64vh, 500px);
+
+        background-position:82% 14px;
 
     }
 
